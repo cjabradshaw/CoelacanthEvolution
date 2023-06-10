@@ -17,7 +17,7 @@ accompanies paper:<br>
 ## Abstract 
 'Living fossils' are colloquially characterised as modern species that have undergone little evolutionary change over extended geological time. For more than 85 years, the coelacanth fishes (Sarcopterygii: Actinistia) have been portrayed as emblematic examples of 'living fossils', and one of the most morphologically conservative vertebrate groups. Here we describe a new, exceptionally well-preserved Late Devonian coelacanth from the Gogo Formation in Western Australia. This new fossil fish reveals rare insight into the branchial, neurocranial, and palaeoneurological condition of the earliest coelacanths. We performed the most comprehensive evolutionary analysis of the group to date, using discrete, meristic and continuous traits (including geometric morphometrics) to assess the phylogeny, evolutionary rates, and the morphological disparity of coelacanths. We show that coelacanths experienced a fast burst of evolution during the Devonian Period which then slowed considerably up to present day. Over the last 100 million years, discrete characters have essentially stopped evolving, but meristic and morphometric characters have continued to change. Coelacanths have long ceased evolving major new innovations, but minor tinkering of their body plan has continued unabated; thus, <em>Latimeria</em> can indeed be considered a 'living fossil', but with vital nuances.
 
-## Scripts
+## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts">Scripts</a>
 - <code>Coelacanth model Github.R</code>
 
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
