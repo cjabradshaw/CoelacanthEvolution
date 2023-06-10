@@ -20,11 +20,10 @@ accompanies paper:<br>
 <br>
 
 ## Scripts
-- x
+- <code>Coelacanth model Github.R</code>
 
-## Data
-
-- x
+## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
+- <em>coelacanthDat.csv</a>
 
 ## R libraries
 - <code>dismo</code>
