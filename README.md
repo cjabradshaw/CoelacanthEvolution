@@ -23,7 +23,7 @@ accompanies paper:<br>
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
 - <em>coelacanthDat.csv</em>
 
-## R libraries
+## Required R libraries
 - <code>dismo</code>
 - <code>gbm</code>
 
