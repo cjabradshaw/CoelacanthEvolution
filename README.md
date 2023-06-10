@@ -2,7 +2,7 @@
 
 Boosted regression tree analysis to determine relationship between Coelacanth rate of evolution and environmental parameters
 
-<img align="right" src="www/coelacanth.png" alt="Latimeria chalumnae" width="300" style="margin-top: 20px">
+<img align="right" src="www/coelacanth.png" alt="Latimeria chalumnae" width="400" style="margin-top: 20px">
 <br>
 <br>
 Prof <a href="https://globalecologyflinders.com/people/#DIRECTOR">Corey J. A. Bradshaw</a> <br>
