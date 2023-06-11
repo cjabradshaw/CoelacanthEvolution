@@ -2,7 +2,7 @@
 ## Corey Bradshaw
 ## June 2023
 
-# testing effects of dissolved O2, O2, CO2, % shallow seas, sea level, subduction flux, sea surface temperature
+# testing effects of dissolved O₂, O₂, CO₂, % shallow seas, sea level, subduction flux, sea surface temperature
 # on rate of evolution preceding fossil discovery
 
 # libraries
