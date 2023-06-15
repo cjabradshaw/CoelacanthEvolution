@@ -1,6 +1,6 @@
 # Coelacanth evolution rate
 
-Analyses accompanying article on Coelacanth evolution.
+Analyses accompanying article on coelacanth evolution.
 
 <img align="right" src="www/coelacanth.png" alt="Latimeria chalumnae" width="400" style="margin-top: 20px">
 <br>
