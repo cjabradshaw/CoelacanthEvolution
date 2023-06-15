@@ -1,6 +1,6 @@
 # Coelacanth evolution rate
 
-Boosted regression tree analysis to determine relationship between Coelacanth rate of evolution and environmental parameters
+Analyses accompanying article on Coelacanth evolution.
 
 <img align="right" src="www/coelacanth.png" alt="Latimeria chalumnae" width="400" style="margin-top: 20px">
 <br>
