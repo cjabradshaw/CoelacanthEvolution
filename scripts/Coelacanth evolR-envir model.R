@@ -10,7 +10,7 @@ library(dismo)
 library(gbm)
 
 ## import data
-cdat <- read.csv("coelacanthDat.csv")
+cdat <- read.csv("coelacanthEvolRenvDat.csv")
 head(cdat)
 
 ## calculate median values for full set
@@ -34,7 +34,7 @@ cormat[lower.tri(cormat)] <- NA
 cormat
 dim(cormat)
 
-# remove O2 and sea level from analysis (dissolved O2 more relevant; sea level correlated with subduction flux)
+# remove O₂ and sea level from analysis (dissolved O₂ more relevant; sea level correlated with subduction flux)
 
 # histograms
 hist(dO2M)
@@ -131,7 +131,7 @@ SSTscOut <- data.frame(age.mn, age.sd, SSTsc.mn,SSTsc.up,SSTsc.lo)
 fitssSSTsc <- smooth.spline(SSTscOut$age.mn, SSTscOut$SSTsc.mn,cv = TRUE)
 SSTscsSmthSpln <- data.frame(fitssSSTsc$x, fitssSSTsc$y)
 
-# CO2
+# CO₂
 CO2sc <- as.numeric(scale(c(as.vector(cdat$CO2ageMinHi), as.vector(cdat$CO2ageMinLo),
            as.vector(cdat$CO2ageMaxHi), as.vector(cdat$CO2ageMaxLo)), center=T, scale=T))
 CO2scDat <- data.frame(CO2sc[1:81], CO2sc[82:(2*81)], CO2sc[163:(3*81)], CO2sc[244:(4*81)])
@@ -146,7 +146,7 @@ CO2scOut <- data.frame(age.mn, age.sd, CO2sc.mn,CO2sc.up,CO2sc.lo)
 fitssCO2sc <- smooth.spline(CO2scOut$age.mn, CO2scOut$CO2sc.mn,cv = TRUE)
 CO2scsSmthSpln <- data.frame(fitssCO2sc$x, fitssCO2sc$y)
 
-# dO2
+# dO₂
 dO2sc <- as.numeric(scale(c(as.vector(cdat$disO2ageMinHi), as.vector(cdat$disO2ageMinLo),
                             as.vector(cdat$disO2ageMaxHi), as.vector(cdat$disO2ageMaxLo)), center=T, scale=T))
 dO2scDat <- data.frame(dO2sc[1:81], dO2sc[82:(2*81)], dO2sc[163:(3*81)], dO2sc[244:(4*81)])
