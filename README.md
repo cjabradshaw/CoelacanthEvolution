@@ -26,6 +26,11 @@ article:<br>
 - <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/PAUP">PAUP</a></code> (Phylogenetic Analysis Using Parsimony; developed by <a href="https://www.flinders.edu.au/people/mike.lee">Mike Lee</a>)
 <img align="center" src="www/coelphylogeny.png" alt="Latimeria chalumnae" width="800" style="margin-top: 20px">
 
+### <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/evolrate">rates of evolution</a>
+- <code>rates_through_time.R</code> (developed by <a href="https://www.naturalis.nl/en/science/researchers/benedict-king">Ben King</a>): R code for plotting the uncorrelated log-normal (UCLN) clock rates through time requires BEAST time treefile (concatentated, post-burnin) for input.  This file contains 8000 trees and is 2 TB, and might have to be subsampled (thinned) due to memory constraints to run the script; plots in article subsampled every 5<sup>th</sup> tree. Tree file included here (Coelacanths_87_268_tipsVariance_Dis_Mer_Con_uclnG_RootExp418_MC3_sumBi20/thinned.trees) is only the first 10 trees from this subsampled file (~ 2 GB).
+- <code>epoch_clock.R</code>
+- <code>functions.R</code>
+
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
 - <em>coelacanthEvolRenvDat.csv</em> (compiled by <a href="https://www.uqar.ca/universite/a-propos-de-l-uqar/departements/departement-de-biologie-chimie-et-geographie/cloutier-richard">Richard Cloutier</a>): rate of evolution and environmental data (subduction flux, % shallow seas, atmospheric CO<sub>2</sub>, sea surface temperature, dissolved O<sub>2</sub>
 
