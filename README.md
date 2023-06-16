@@ -44,13 +44,25 @@ article:<br>
 - <em>coelacanthEvolRenvDat.csv</em> (compiled by <a href="https://www.uqar.ca/universite/a-propos-de-l-uqar/departements/departement-de-biologie-chimie-et-geographie/cloutier-richard">Richard Cloutier</a>): rate of evolution and environmental data (subduction flux, % shallow seas, atmospheric CO<sub>2</sub>, sea surface temperature, dissolved O<sub>2</sub>
 
 ## Required R libraries
-- <a href="https://cran.r-project.org/web/packages/dismo/index.html"><code>dismo</code></a>
-- <a href="https://www.rdocumentation.org/packages/gbm/versions/2.1.8.1"><code>gbm</code></a>
-- <a href="https://www.tidyverse.org"><code>tidyverse</code></a>
+- cluster
 - <a href="https://www.rdocumentation.org/packages/data.table/versions/1.14.8"><code>data.table</code></a>
+- <a href="https://cran.r-project.org/web/packages/dismo/index.html"><code>dismo</code></a>
 - <a href="https://www.rdocumentation.org/packages/dispRity/versions/1.7.0"><code>dispRity</code></a>
-- <a href="https://www.rdocumentation.org/packages/phylotate/versions/1.3"><code>phylotate</code></a>
+- dplyr
+- <a href="https://www.rdocumentation.org/packages/gbm/versions/2.1.8.1"><code>gbm</code></a>
 - <a href="https://www.rdocumentation.org/packages/geoscale/versions/2.0/topics/geoscale-package"><code>geoscale</code></a>
+- ggplot2
+- ggrepel
+- grid
+- Momocs
+- <a href="https://www.rdocumentation.org/packages/phylotate/versions/1.3"><code>phylotate</code></a>
 - <a href="https://www.rdocumentation.org/packages/phytools/versions/1.5-1"><code>phytools</code></a>
+- plyr
+- readxl
+- reshape2
+- scales
+- stats
+- <a href="https://www.tidyverse.org"><code>tidyverse</code></a>
+- vegan
 
 <p><a href="https://www.flinders.edu.au"><img align="bottom-left" src="www/Flinders_University_Logo_Horizontal_RGB_Master.png" alt="Flinders University" width="140" style="margin-top: 20px"></a> &nbsp; <a href="https://globalecologyflinders.com"><img align="bottom-left" src="www/GEL Logo Kaurna New Transp.png" alt="GEL" width="75" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.uqar.ca/"><img align="bottom-left" src="www/UQARlogo.png" alt="UQAR" width="90" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.samuseum.sa.gov.au/"><img align="bottom-left" src="www/SAMlogo.png" alt="SAM" width="100" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.bristol.ac.uk"><img align="bottom-left" src="www/UBlogo.png" alt="UB" width="80" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://www.naturalis.nl/en"><img align="bottom-left" src="www/NBClogo.png" alt="NCU" width="50" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://www.curtin.edu.au/"><img align="bottom-left" src="www/CUlogo.png" alt="CU" width="40" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://www.eva.mpg.de/index/"><img align="bottom-left" src="www/maxplancklogo.png" alt="Max Planck" width="80" style="margin-top: 20px"></a></p>
