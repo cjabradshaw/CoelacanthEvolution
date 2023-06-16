@@ -30,7 +30,7 @@ article:<br>
 <img align="center" src="www/epoch_clock.png" alt="epoch clock" width="800" style="margin-top: 20px">
 
 ### 3. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/disparity">disparity</a>
-<img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
+<img align="right" src="www/fishshape.png" alt="disparity" width="80" style="margin-top: 20px">
 - <code>disparity.R</code> (developed by <a href="https://github.com/cjabradshaw">Olivia Vanhaesebroucke Olivia</a>): R code for disparity analyses and figure.
 
 ### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
