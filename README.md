@@ -36,13 +36,13 @@ article:<br>
 - <em>coelacanthEvolRenvDat.csv</em> (compiled by <a href="https://www.uqar.ca/universite/a-propos-de-l-uqar/departements/departement-de-biologie-chimie-et-geographie/cloutier-richard">Richard Cloutier</a>): rate of evolution and environmental data (subduction flux, % shallow seas, atmospheric CO<sub>2</sub>, sea surface temperature, dissolved O<sub>2</sub>
 
 ## Required R libraries
-- <code>dismo</code>
-- <code>gbm</code>
-- <code>tidyverse</code>
-- <code>data.table</code>
-- <code>dispRity</code>
-- <code>phylotate</code>
-- <code>geoscale</code>
-- <code>phytools</code>
+- <a href="https://cran.r-project.org/web/packages/dismo/index.html"><code>dismo</code></a>
+- <a href="https://www.rdocumentation.org/packages/gbm/versions/2.1.8.1"><code>gbm</code></a>
+- <a href="https://www.tidyverse.org"><code>tidyverse</code></a>
+- <a href="https://www.rdocumentation.org/packages/data.table/versions/1.14.8"><code>data.table</code></a>
+- <a href="https://www.rdocumentation.org/packages/dispRity/versions/1.7.0"><code>dispRity</code></a>
+- <a href="https://www.rdocumentation.org/packages/phylotate/versions/1.3"><code>phylotate</code></a>
+- <a href="https://www.rdocumentation.org/packages/geoscale/versions/2.0/topics/geoscale-package"><code>geoscale</code></a>
+- <a href="https://www.rdocumentation.org/packages/phytools/versions/1.5-1"><code>phytools</code></a>
 
 <p><a href="https://www.flinders.edu.au"><img align="bottom-left" src="www/Flinders_University_Logo_Horizontal_RGB_Master.png" alt="Flinders University" width="150" style="margin-top: 20px"></a> &nbsp; <a href="https://globalecologyflinders.com"><img align="bottom-left" src="www/GEL Logo Kaurna New Transp.png" alt="GEL" width="85" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.uqar.ca/"><img align="bottom-left" src="www/UQARlogo.png" alt="UQAR" width="100" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.samuseum.sa.gov.au/"><img align="bottom-left" src="www/SAMlogo.png" alt="SAM" width="110" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.bristol.ac.uk"><img align="bottom-left" src="www/UBlogo.png" alt="UB" width="90" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://www.naturalis.nl/en"><img align="bottom-left" src="www/NBClogo.png" alt="NCU" width="60" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://www.curtin.edu.au/"><img align="bottom-left" src="www/CUlogo.png" alt="CU" width="50" style="margin-top: 20px"></a></p>
