@@ -29,11 +29,18 @@ article:<br>
 - <code>epoch_clock.R</code>: R code to create <em>epoch_clock</em> plot (below)
 <img align="center" src="www/epoch_clock.png" alt="epoch clock" width="800" style="margin-top: 20px">
 
-### 3. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
+### 3. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/disparity">disparity</a>
+<img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
+- <code>disparity.R</code> (developed by <a href="https://github.com/cjabradshaw">Olivia Vanhaesebroucke Olivia</a>): R code for disparity analyses and figure.
+
+### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
 <img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
 - <code>Coelacanth evolR-envir model.R</code> (developed by <a href="https://github.com/cjabradshaw">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of coelacanth rate of evolution.
 
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
+- <em>Postcranial.TPS</em>, <em>Jaws"</em>, <em>Skull</em>: TPS files with landmarks coordinates for the three morphological disparity analyses with geometric morphometrics.
+- <em>Matrix_corrected.nex</em>: Nexus file containing corrected matrix for morphological disparity analysis with discrete characters.
+- <em>Age-habitat.xlsx</em>, <em>Age-habitat-Jaw.xlsx</em>, <em>Age-habitat-GM-PC.xlsx</em>, <em>Age-habitat-Skull.xlsx</em>: Excel files with the list of species and their ages for disparity analyses (figures).
 - <em>coelacanthEvolRenvDat.csv</em> (compiled by <a href="https://www.uqar.ca/universite/a-propos-de-l-uqar/departements/departement-de-biologie-chimie-et-geographie/cloutier-richard">Richard Cloutier</a>): rate of evolution and environmental data (subduction flux, % shallow seas, atmospheric CO<sub>2</sub>, sea surface temperature, dissolved O<sub>2</sub>
 
 ## Required R libraries
