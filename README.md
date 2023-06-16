@@ -20,6 +20,7 @@ article:<br>
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts">Scripts</a>
 ### 1. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
 - <code>Coelacanth evolR-envir model.R</code> (developed by <a href="https://github.com/cjabradshaw">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of coelacanth rate of evolution.
+<img align="right" src="www/decisiontree.png" alt="decision tree" width="200" style="margin-top: 20px">
 
 ### 2. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">phylogenetics</a>
 - <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/BEAST">BEAST</a></code> (Bayesian phylogenetic analysis of molecular sequences; developed by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
