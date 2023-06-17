@@ -19,8 +19,8 @@ article:<br>
 
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts">Scripts</a>
 ### 1. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">phylogenetics</a>
-- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/BEAST">BEAST</a></code> (Bayesian phylogenetic analysis of molecular sequences; developed by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
-- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/PAUP">PAUP</a></code> (Phylogenetic Analysis Using Parsimony; developed by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
+- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/BEAST">BEAST</a></code> (Bayesian phylogenetic analysis of discrete, meristic and continuous traits; written by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
+- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/PAUP">PAUP</a></code> (Parsimony analysis of discrete traits; written by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
 <img align="center" src="www/coelphylogeny.png" alt="coelacanth phylogeny" width="800" style="margin-top: 20px">
 
 ### 2. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/evolrate">rates of evolution</a>
