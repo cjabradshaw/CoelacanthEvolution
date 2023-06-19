@@ -1,5 +1,5 @@
 # Coelacanth evolution rate
-
+<a href="https://zenodo.org/badge/latestdoi/651879994"><img src="https://zenodo.org/badge/651879994.svg" alt="DOI"></a>
 Analyses accompanying article on coelacanth evolution.
 
 <img align="right" src="www/coelacanth.png" alt="Latimeria chalumnae" width="400" style="margin-top: 20px">
