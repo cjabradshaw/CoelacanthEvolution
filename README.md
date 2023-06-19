@@ -18,30 +18,27 @@ article:<br>
 'Living fossils' are colloquially characterised as modern species that have undergone little evolutionary change over extended geological time. For more than 85 years, the coelacanth fishes (Sarcopterygii: Actinistia) have been portrayed as emblematic examples of 'living fossils', and one of the most morphologically conservative vertebrate groups. Here we describe a new, exceptionally well-preserved Late Devonian coelacanth from the Gogo Formation in Western Australia. This new fossil fish reveals rare insight into the branchial, neurocranial, and palaeoneurological condition of the earliest coelacanths. We performed the most comprehensive evolutionary analysis of the group to date, using discrete, meristic and continuous traits (including geometric morphometrics) to assess the phylogeny, evolutionary rates, and the morphological disparity of coelacanths. We show that coelacanths experienced a fast burst of evolution during the Devonian Period which then slowed considerably up to present day. Over the last 100 million years, discrete characters have essentially stopped evolving, but meristic and morphometric characters have continued to change. Coelacanths have long ceased evolving major new innovations, but minor tinkering of their body plan has continued unabated; thus, <em>Latimeria</em> can indeed be considered a 'living fossil', but with vital nuances.
 
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts">Scripts</a>
-### 1. <a href="http://morphobank.org/permalink/?P3471">Morphobank</a>
-- Morphobank (morphological matrices) <a href="http://morphobank.org/permalink/?P3471">Project 3471</a> (project leader: <a href="https://www.flinders.edu.au/people/alice.clement">Alice Clement)</a>: project SSD files
-<img align="center" src="www/M846774.png" alt="† Gogocoelacanthus zhumini (WAM:09.6.148)" width="800" style="margin-top: 20px">
-
-### 2. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">phylogenetics</a>
+### 1. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">phylogenetics</a>
 - <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/BEAST">BEAST</a></code> (Bayesian phylogenetic analysis of discrete, meristic and continuous traits; written by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
 - <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/phylogenetics/PAUP">PAUP</a></code> (Parsimony analysis of discrete traits; written by <a href="https://github.com/Michael-S-Y-Lee">Mike Lee</a>)
 <img align="center" src="www/coelphylogeny.png" alt="coelacanth phylogeny" width="800" style="margin-top: 20px">
 
-### 3. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/evolrate">rates of evolution</a>
+### 2. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/evolrate">rates of evolution</a>
 - <code>rates_through_time.R</code> (developed by <a href="https://github.com/king-ben">Ben King</a>): R code for plotting the uncorrelated log-normal (UCLN) clock rates through time requires BEAST time treefile (concatentated, post-burnin) for input.  This file contains 8000 trees and is 2 GB, and might have to be subsampled (thinned) due to memory constraints to run the script; plots in article subsampled every 5<sup>th</sup> tree. Tree file included here (<a href="https://github.com/cjabradshaw/CoelacanthEvolution/blob/main/scripts/evolrate/Coelacanths_87_268_tipsVariance_Dis_Mer_Con_uclnG_RootExp418_MC3_sumBi20%3Athinned.trees">Coelacanths_87_268_tipsVariance_Dis_Mer_Con_uclnG_RootExp418_MC3_sumBi20/thinned.trees</a>) is only the first 10 trees from this subsampled file (~ 2 MB).
 - <code>functions.R</code>: R source functions called in <code>rates_through_time.R</code>
 - <code>epoch_clock.R</code>: R code to create <em>epoch_clock</em> plot (below)
 <img align="center" src="www/epoch_clock.png" alt="epoch clock" width="800" style="margin-top: 20px">
 
-### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/disparity">disparity</a>
+### 3. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/disparity">disparity</a>
 <img align="right" src="www/fishshape.png" alt="disparity" width="80" style="margin-top: 20px">
 - <code>disparity.R</code> (developed by <a href="https://github.com/cjabradshaw">Olivia Vanhaesebroucke</a>): R code for disparity analyses and figure.
 
-### 5. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
+### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
 <img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
 - <code>Coelacanth evolR-envir model.R</code> (developed by <a href="https://github.com/cjabradshaw">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of coelacanth rate of evolution.
 
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
+- <a href="http://morphobank.org/permalink/?P3471">Morphobank</a> (morphological matrices) <a href="http://morphobank.org/permalink/?P3471">Project 3471</a> (project leader: <a href="https://www.flinders.edu.au/people/alice.clement">Alice Clement)</a>: project <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data/Morphobank">SSD files</a>
 - <em>Postcranial.TPS</em>, <em>Jaws.TPS</em>, <em>Skull.TPS</em>: TPS files with landmarks coordinates for the three morphological disparity analyses with geometric morphometrics
 - <em>Matrix_corrected.nex</em>: Nexus file containing corrected matrix for morphological disparity analysis with discrete characters
 - <em>Age-habitat.xlsx</em>, <em>Age-habitat-Jaw.xlsx</em>, <em>Age-habitat-GM-PC.xlsx</em>, <em>Age-habitat-Skull.xlsx</em>: Excel files with the list of species and their ages for disparity analyses (figures)
