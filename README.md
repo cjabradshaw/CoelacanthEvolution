@@ -1,4 +1,5 @@
 # Coelacanth evolution rate
+<br>
 <a href="https://zenodo.org/badge/latestdoi/651879994"><img src="https://zenodo.org/badge/651879994.svg" alt="DOI"></a>
 Analyses accompanying article on coelacanth evolution.
 
