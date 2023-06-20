@@ -33,7 +33,7 @@ article:<br>
 <img align="right" src="www/fishshape.png" alt="disparity" width="80" style="margin-top: 20px">
 - <code>disparity.R</code> (developed by <a href="https://github.com/cjabradshaw">Olivia Vanhaesebroucke</a>): R code for disparity analyses and figure.
 
-### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees</a>
+### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">boosted regression trees (environmental drivers of evolution rate)</a>
 <img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
 - <code>Coelacanth evolR-envir model.R</code> (developed by <a href="https://github.com/cjabradshaw">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of coelacanth rate of evolution.
 
