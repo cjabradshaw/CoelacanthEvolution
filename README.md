@@ -35,7 +35,7 @@ article:<br>
 
 ### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">environmental drivers of evolution rate</a>
 <img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
-- <code>Coelacanth evolR-envir model.R</code> (developed by <a href="https://github.com/cjabradshaw">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of coelacanth rate of evolution.
+- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/blob/main/scripts/BRT/Coelacanth%20evolR-envir%20model.R">Coelacanth evolR-envir model.R</a></code> (developed by <a href="https://github.com/cjabradshaw">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of coelacanth rate of evolution.
 
 ## <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data">Data</a>
 - <a href="http://morphobank.org/permalink/?P3471">Morphobank</a> (morphological matrices) <a href="http://morphobank.org/permalink/?P3471">Project 3471</a> (project leader: <a href="https://www.flinders.edu.au/people/alice.clement">Alice Clement)</a>: project <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/data/Morphobank">SSD files</a>
