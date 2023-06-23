@@ -32,7 +32,7 @@ article:<br>
 
 ### 3. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/disparity">disparity</a>
 <img align="right" src="www/fishshape.png" alt="disparity" width="80" style="margin-top: 20px">
-- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/blob/main/scripts/disparity/disparity.R">disparity.R</a></code> (developed by <a href="https://github.com/cjabradshaw">Olivia Vanhaesebroucke</a>): R code for disparity analyses and figure.
+- <code><a href="https://github.com/cjabradshaw/CoelacanthEvolution/blob/main/scripts/disparity/disparity.R">disparity.R</a></code> (developed by <a href="https://scholar.google.com/citations?user=6LHmxgUAAAAJ&hl=en">Olivia Vanhaesebroucke</a>): R code for disparity analyses and figure.
 
 ### 4. <a href="https://github.com/cjabradshaw/CoelacanthEvolution/tree/main/scripts/BRT">environmental drivers of evolution rate</a>
 <img align="right" src="www/decisiontree.png" alt="decision tree" width="100" style="margin-top: 20px">
