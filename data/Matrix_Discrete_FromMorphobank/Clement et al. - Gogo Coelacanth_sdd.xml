@@ -5071,7 +5071,7 @@
         <CanonicalAuthorship>Long</CanonicalAuthorship>
       </TaxonName>
       <TaxonName id="t919965">
-        <Label><Text>† Gogocoelacanthus zhumini Clement et al.</Text></Label>
+        <Label><Text>† Namugawi wirngarri Clement et al.</Text></Label>
         <CanonicalAuthorship>Clement et al.</CanonicalAuthorship>
       </TaxonName>
       <TaxonName id="t919940">
@@ -5318,7 +5318,7 @@
     <MediaObjects>
       <MediaObject id="m846774">
         <Representation>
-          <Label>† Gogocoelacanthus zhumini (WAM:09.6.148)</Label>
+          <Label>† Namugawi wirngarri (WAM:09.6.148)</Label>
         </Representation>
         <Type>image/png</Type>
         <Data href="file:/media/Mmedia/M846774_Part.png"/>
@@ -5333,7 +5333,7 @@
       </Specimen>
       <Specimen id="s160079">
         <Representation>
-          <Label>† Gogocoelacanthus zhumini (WAM:09.6.148)</Label>
+          <Label>† Namugawi wirngarri (WAM:09.6.148)</Label>
           <MediaObject ref="m846774"/>
         </Representation>
         <TaxonName ref="t919965"/>
@@ -10404,7 +10404,7 @@
         <CanonicalAuthorship>Long</CanonicalAuthorship>
       </TaxonName>
       <TaxonName id="t919965">
-        <Label><Text>† Gogocoelacanthus zhumini Clement et al.</Text></Label>
+        <Label><Text>† Namugawi wirngarri Clement et al.</Text></Label>
         <CanonicalAuthorship>Clement et al.</CanonicalAuthorship>
       </TaxonName>
       <TaxonName id="t919940">
@@ -35780,7 +35780,7 @@
         </SummaryData>
       </CodedDescription>
       <CodedDescription id="row_t919965">
-        <Representation><Label>† Gogocoelacanthus zhumini Clement et al.</Label></Representation>
+        <Representation><Label>† Namugawi wirngarri Clement et al.</Label></Representation>
         <Scope><TaxonName ref="t919965"></TaxonName></Scope>
         <SummaryData>
           <Categorical ref="c2082055">
