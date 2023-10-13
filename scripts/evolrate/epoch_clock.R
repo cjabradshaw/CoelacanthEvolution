@@ -2,7 +2,7 @@ setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 library(tidyverse)
 library(data.table)
-logger <- fread("../Coelacanths_87_268_tipsVariance_Dis_Mer_Con_7epoch_RootExp418_sum_bi20_LONGRUN/Coelacanths_87_268_tipsVariance_Dis_Mer_epoch_all.log")
+logger <- fread("Coelacanths_87_268_tipsVariance_Dis_Mer_epoch_all.log")
 
 
 df <- logger |>

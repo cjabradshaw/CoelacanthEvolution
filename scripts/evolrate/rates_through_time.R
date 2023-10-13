@@ -4,7 +4,8 @@ library(phylotate)
 library(geoscale)
 library(phytools)
 source("functions.R")
-file <- "../Coelacanths_87_268_tipsVariance_Dis_Mer_Con_uclnG_RootExp418_MC3_sumBi20/thinned.trees"
+#this is a very small sample of trees, for demonstration only, not the same as used in the paper
+file <- "Coelacanths_87_268_tipsVariance_Dis_Mer_Con_uclnG_RootExp418_MC3_sumBi20_thinned.trees"
 trees <- read_annotated(file)
 onych <- c("Qingmenodus_yui", "Strunius_rolandi", "Strunius_walteri", "Onychodus_jandemarrai", "Grossius_aragonensis")
 
