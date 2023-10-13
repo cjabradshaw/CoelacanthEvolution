@@ -14,6 +14,6 @@ def search_files(directory, search_string):
                             print(f"Found in {file_path}: {line.strip()}")
 
 directory = os.getcwd() 
-search_string = "gogocoelacanthus"
+search_string = "gogoc"
 
 search_files(directory, search_string)
