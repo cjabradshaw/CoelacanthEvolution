@@ -10,7 +10,7 @@ library(dismo)
 library(gbm)
 
 ## import data
-cdat <- read.csv("coelacanthEvolRenvDat.csv")
+cdat <- read.csv("../../data/coelacanthEvolRenvDat.csv")
 head(cdat)
 
 ## calculate median values for full set
