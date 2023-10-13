@@ -17,3 +17,6 @@ directory = os.getcwd()
 search_string = "gogoc"
 
 search_files(directory, search_string)
+
+search_string = "wirngarii"
+search_files(directory, search_string)
