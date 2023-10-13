@@ -1,1 +1,1 @@
-
+These files include the BEAST xml executable, and the MCC consensus time tree and and substitution trees for discrete, meristic and continuous traits, with all node and branch annotations (e.g. node ages, branch lengths, rates of evolution)
