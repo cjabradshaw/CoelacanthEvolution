@@ -1,1 +1,1 @@
-
+This is a zipped file the TNT analyses of the discrete, meristic and continuous data, with separate folders for the main parsimony search, and the bootstrap resampling.  In each folder is the TNT script, all best trees, and the strict consensus tree (all taxa, and after pruning of wildcards identified using RogueNarRok).  The MP folder also has a file of all MPTs and the RogueNaRok results.
