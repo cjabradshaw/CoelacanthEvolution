@@ -296,17 +296,17 @@ biter <- 1000
 eq.sp.points <- 100
 
 # create storage arrays
-val.arr <- pred.arr <- array(data = NA, dim = c(eq.sp.points, dim(datM[,c(15:18,20,22)])[2], biter),
-                             dimnames=list(paste("x",1:eq.sp.points,sep=""), colnames(datM[,c(15:18,20,22)]), 
+val.arr <- pred.arr <- array(data = NA, dim = c(eq.sp.points, dim(datM[,c(15:16,19,20,22)])[2], biter),
+                             dimnames=list(paste("x",1:eq.sp.points,sep=""), colnames(datM[,c(15:16,19,20,22)]), 
                              paste("b",1:biter,sep="")))
 
 # create storage vectors
 D2.vec <- CV.cor.vec <- CV.cor.se.vec <- 
-  contfld.ri <- dO2.ri <- pcShall.ri <- CO2.ri <- subFlux.ri <- SST.ri <- rep(NA,biter)
+  contfld.ri <- dO2.ri <- CO2.ri <- subFlux.ri <- SST.ri <- rep(NA,biter)
 
 # datset addresses
-nCols <- dim(cdat[,c(4,7:36)])[2]
-colnums <- c(4,7:36)
+nCols <- dim(cdat[,c(4,7:14,17:36)])[2]
+colnums <- c(4,7:14,17:36)
 
 ## functions
 # create random interval time vector
@@ -352,31 +352,27 @@ bootDatCreate <- function(dataFrame) {
   maxscontfld <- apply(dataFrame[,c(2:5)], MARGIN=1, max, na.rm=T)
   minsdO2 <- apply(dataFrame[,c(6:9)], MARGIN=1, min, na.rm=T)
   maxsdO2 <- apply(dataFrame[,c(6:9)], MARGIN=1, max, na.rm=T)
-  minsdpcShall <- apply(dataFrame[,c(10:11)], MARGIN=1, min, na.rm=T)
-  maxsdpcShall <- apply(dataFrame[,c(10:11)], MARGIN=1, max, na.rm=T)
-  minsCO2 <- apply(dataFrame[,c(12:15)], MARGIN=1, min, na.rm=T)
-  maxsCO2 <- apply(dataFrame[,c(12:15)], MARGIN=1, max, na.rm=T)
-  minssubFlux <- apply(dataFrame[,c(20:23)], MARGIN=1, min, na.rm=T)
-  maxssubFlux <- apply(dataFrame[,c(20:23)], MARGIN=1, max, na.rm=T)
-  minsSST <- apply(dataFrame[,c(28:31)], MARGIN=1, min, na.rm=T)
-  maxsSST <- apply(dataFrame[,c(28:31)], MARGIN=1, max, na.rm=T)
+  minsCO2 <- apply(dataFrame[,c(10:13)], MARGIN=1, min, na.rm=T)
+  maxsCO2 <- apply(dataFrame[,c(10:13)], MARGIN=1, max, na.rm=T)
+  minssubFlux <- apply(dataFrame[,c(18:21)], MARGIN=1, min, na.rm=T)
+  maxssubFlux <- apply(dataFrame[,c(18:21)], MARGIN=1, max, na.rm=T)
+  minsSST <- apply(dataFrame[,c(26:29)], MARGIN=1, min, na.rm=T)
+  maxsSST <- apply(dataFrame[,c(26:29)], MARGIN=1, max, na.rm=T)
   
-  valscontfld <- valsdO2 <- valspcShall <- valsCO2 <- valssubFlux <- valsSST <- rep(NA,length(minsdO2))
+  valscontfld <- valsdO2 <- valsCO2 <- valssubFlux <- valsSST <- rep(NA,length(minsdO2))
   
   for (s in 1:length(minsdO2)) {
     valscontfld[s] <- runif(1, minscontfld[s], maxscontfld[s])
     valsdO2[s] <- runif(1, minsdO2[s], maxsdO2[s])
-    valspcShall[s] <- runif(1, minsdpcShall[s], minsdpcShall[s])
     valsCO2[s] <- runif(1, minsCO2[s], maxsCO2[s])
     valssubFlux[s] <- runif(1, minssubFlux[s], maxssubFlux[s])
     valsSST[s] <- runif(1, minsSST[s], maxsSST[s])
   } # end s
   
   datMboot <- data.frame(scale(log10(dataFrame[,1]), center=T, scale=T), scale(valscontfld, center=T, scale=T),
-                         scale(valsdO2, center=T, scale=T), scale(valspcShall, center=T, scale=T),
-                         scale(valsCO2, center=T, scale=T),
+                         scale(valsdO2, center=T, scale=T), scale(valsCO2, center=T, scale=T),
                          scale(valssubFlux, center=T, scale=T), scale(valsSST, center=T, scale=T))
-  colnames(datMboot) <- c("evolR", "contfld", "dO2", "pcShall", "CO2", "subFlux", "SST")
+  colnames(datMboot) <- c("evolR", "contfld", "dO2", "CO2", "subFlux", "SST")
 
   return(datMboot)
 } # end function
@@ -387,10 +383,10 @@ for (b in 1:biter) {
   datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
 
   datMboot <- bootDatCreate(datOut3)
-  bootDatNcols <- dim(datMboot[,c(2:7)])[2]
+  bootDatNcols <- dim(datMboot[,c(2:6)])[2]
   # continental flooding, dissolved O2, % shallow sea, atmospheric CO2, subduction flux, SST
   
-  bootDatColNums <- c(2:7)
+  bootDatColNums <- c(2:6)
   head(datMboot)
   dim(datMboot)
   
@@ -398,40 +394,40 @@ for (b in 1:biter) {
   if (dim(datMboot)[1] < 35) {
     datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
     datMboot <- bootDatCreate(datOut3)
-    bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-    bootDatColNums <- c(2:7)
+    bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+    bootDatColNums <- c(2:6)
   }
 
   ## if small resampled dataset, redo
   if (dim(datMboot)[1] < 35) {
     datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
     datMboot <- bootDatCreate(datOut3)
-    bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-    bootDatColNums <- c(2:7)
+    bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+    bootDatColNums <- c(2:6)
   }
   
   ## if small resampled dataset, redo
   if (dim(datMboot)[1] < 35) {
     datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
     datMboot <- bootDatCreate(datOut3)
-    bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-    bootDatColNums <- c(2:7)
+    bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+    bootDatColNums <- c(2:6)
   }
   
   ## if small resampled dataset, redo
   if (dim(datMboot)[1] < 35) {
     datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
     datMboot <- bootDatCreate(datOut3)
-    bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-    bootDatColNums <- c(2:7)
+    bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+    bootDatColNums <- c(2:6)
   }
 
   ## if small resampled dataset, redo
   if (dim(datMboot)[1] < 35) {
     datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
     datMboot <- bootDatCreate(datOut3)
-    bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-    bootDatColNums <- c(2:7)
+    bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+    bootDatColNums <- c(2:6)
   }
   
     # boosted regression tree
@@ -448,8 +444,8 @@ for (b in 1:biter) {
     if (is.null("brt.fit")==T) {
       datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
       datMboot <- bootDatCreate(datOut3)
-      bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-      bootDatColNums <- c(2:7)
+      bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+      bootDatColNums <- c(2:6)
       
       brt.fit <- gbm.step(datMboot, gbm.x = attr(datMboot, "names")[bootDatColNums], 
                         gbm.y = attr(datMboot, "names")[1], family="gaussian", max.trees=1000000,
@@ -458,11 +454,11 @@ for (b in 1:biter) {
       summ.fit <- summary(brt.fit)
     }
 
-    if (is.null("brt.fit")==T) {
+    if (is.null("brt.fit")==T | dim(datMboot)[1] < 35) {
       datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
       datMboot <- bootDatCreate(datOut3)
-      bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-      bootDatColNums <- c(2:7)
+      bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+      bootDatColNums <- c(2:6)
       
       brt.fit <- gbm.step(datMboot, gbm.x = attr(datMboot, "names")[bootDatColNums], 
                           gbm.y = attr(datMboot, "names")[1], family="gaussian", max.trees=1000000,
@@ -471,12 +467,33 @@ for (b in 1:biter) {
       summ.fit <- summary(brt.fit)
     }
     
-    if (is.null("brt.fit")==T) {
+    if (is.null("brt.fit")==T | dim(datMboot)[1] < 35) {
       datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
       datMboot <- bootDatCreate(datOut3)
-      bootDatNcols <- dim(datMboot[,c(2:7)])[2]
-      bootDatColNums <- c(2:7)
+      bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+      bootDatColNums <- c(2:6)
       
+      brt.fit <- gbm.step(datMboot, gbm.x = attr(datMboot, "names")[bootDatColNums], 
+                          gbm.y = attr(datMboot, "names")[1], family="gaussian", max.trees=1000000,
+                          tolerance = 0.00005, learning.rate = 0.0003, bag.fraction=0.75,
+                          tree.complexity = 2, silent=T, tolerance.method = "auto")
+      summ.fit <- summary(brt.fit)
+    }
+
+    if (is.null("brt.fit")==T | dim(datMboot)[1] < 35) {
+      datOut3 <- resampDatCreate(cdat, nCols, colnums, nFAD, mComb, sdComb, oldest)
+      datMboot <- bootDatCreate(datOut3)
+      bootDatNcols <- dim(datMboot[,c(2:6)])[2]
+      bootDatColNums <- c(2:6)
+      
+      brt.fit <- gbm.step(datMboot, gbm.x = attr(datMboot, "names")[bootDatColNums], 
+                          gbm.y = attr(datMboot, "names")[1], family="gaussian", max.trees=1000000,
+                          tolerance = 0.00005, learning.rate = 0.0003, bag.fraction=0.75,
+                          tree.complexity = 2, silent=T, tolerance.method = "auto")
+      summ.fit <- summary(brt.fit)
+    }
+    
+    while (is.null("brt.fit")==T) {
       brt.fit <- gbm.step(datMboot, gbm.x = attr(datMboot, "names")[bootDatColNums], 
                           gbm.y = attr(datMboot, "names")[1], family="gaussian", max.trees=1000000,
                           tolerance = 0.00005, learning.rate = 0.0003, bag.fraction=0.75,
@@ -487,10 +504,9 @@ for (b in 1:biter) {
     # variable relative importance
     contfld.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][1])]
     dO2.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][2])]
-    pcShall.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][3])]
-    CO2.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][4])]
-    subFlux.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][5])]
-    SST.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][6])]
+    CO2.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][3])]
+    subFlux.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][4])]
+    SST.ri[b] <- summ.fit$rel.inf[which(summ.fit$var == attr(datMboot, "names")[bootDatColNums][5])]
     
     D2 <- 100 * (brt.fit$cv.statistics$deviance.mean - brt.fit$self.statistics$mean.resid) / 
         brt.fit$cv.statistics$deviance.mean
@@ -547,7 +563,6 @@ CV.cor.se.update <- CV.cor.se.vec[1:biter]
 
 contfld.ri.update <- contfld.ri[1:biter]
 dO2.ri.update <- dO2.ri[1:biter]
-pcShall.ri.update <- pcShall.ri[1:biter]
 CO2.ri.update <- CO2.ri[1:biter]
 subFlux.ri.update <- subFlux.ri[1:biter]
 SST.ri.update <- SST.ri[1:biter]
@@ -559,7 +574,6 @@ for (k in 1:kappa.n) {
   
   contfld.mean <- mean(contfld.ri.update, na.rm=T); contfld.sd <- sd(contfld.ri.update, na.rm=T)
   dO2.mean <- mean(dO2.ri.update, na.rm=T); dO2.sd <- sd(dO2.ri.update, na.rm=T)
-  pcShall.mean <- mean(pcShall.ri.update, na.rm=T); pcShall.sd <- sd(pcShall.ri.update, na.rm=T)
   CO2.mean <- mean(CO2.ri.update, na.rm=T); CO2.sd <- sd(CO2.ri.update, na.rm=T)
   subFlux.mean <- mean(subFlux.ri.update, na.rm=T); subFlux.sd <- sd(subFlux.ri.update, na.rm=T)
   SST.mean <- mean(SST.ri.update, na.rm=T); SST.sd <- sd(SST.ri.update, na.rm=T)
@@ -578,9 +592,6 @@ for (k in 1:kappa.n) {
                                       contfld.ri.update[u])
     dO2.ri.update[u] <- ifelse((dO2.ri.update[u] < (dO2.mean-kappa*dO2.sd) | 
                                   dO2.ri.update[u] > (dO2.mean+kappa*dO2.sd)), NA, dO2.ri.update[u])
-    pcShall.ri.update[u] <- ifelse((pcShall.ri.update[u] < (pcShall.mean-kappa*pcShall.sd) | 
-                                      pcShall.ri.update[u] > (pcShall.mean+kappa*pcShall.sd)), NA, 
-                                      pcShall.ri.update[u])
     CO2.ri.update[u] <- ifelse((CO2.ri.update[u] < (CO2.mean-kappa*CO2.sd) | 
                                   CO2.ri.update[u] > (CO2.mean+kappa*CO2.sd)), NA, CO2.ri.update[u])
     subFlux.ri.update[u] <- ifelse((subFlux.ri.update[u] < (subFlux.mean-kappa*subFlux.sd) | 
@@ -611,10 +622,6 @@ dO2.ri.lo <- quantile(dO2.ri.update, probs=0.025, na.rm=TRUE)
 dO2.ri.med <- median(dO2.ri.update, na.rm=TRUE)
 dO2.ri.up <- quantile(dO2.ri.update, probs=0.975, na.rm=TRUE)
 
-pcShall.ri.lo <- quantile(pcShall.ri.update, probs=0.025, na.rm=TRUE)
-pcShall.ri.med <- median(pcShall.ri.update, na.rm=TRUE)
-pcShall.ri.up <- quantile(pcShall.ri.update, probs=0.975, na.rm=TRUE)
-
 CO2.ri.lo <- quantile(CO2.ri.update, probs=0.025, na.rm=TRUE)
 CO2.ri.med <- median(CO2.ri.update, na.rm=TRUE)
 CO2.ri.up <- quantile(CO2.ri.update, probs=0.975, na.rm=TRUE)
@@ -627,9 +634,9 @@ SST.ri.lo <- quantile(SST.ri.update, probs=0.025, na.rm=TRUE)
 SST.ri.med <- median(SST.ri.update, na.rm=TRUE)
 SST.ri.up <- quantile(SST.ri.update, probs=0.975, na.rm=TRUE)
 
-ri.lo <- c(contfld.ri.lo,dO2.ri.lo,pcShall.ri.lo,CO2.ri.lo,subFlux.ri.lo,SST.ri.lo)
-ri.med <- c(contfld.ri.med,dO2.ri.med,pcShall.ri.med,CO2.ri.med,subFlux.ri.med,SST.ri.med)
-ri.up <- c(contfld.ri.up,dO2.ri.up,pcShall.ri.up,CO2.ri.up,subFlux.ri.up,SST.ri.up)
+ri.lo <- c(contfld.ri.lo,dO2.ri.lo,CO2.ri.lo,subFlux.ri.lo,SST.ri.lo)
+ri.med <- c(contfld.ri.med,dO2.ri.med,CO2.ri.med,subFlux.ri.med,SST.ri.med)
+ri.up <- c(contfld.ri.up,dO2.ri.up,CO2.ri.up,subFlux.ri.up,SST.ri.up)
 
 ri.out <- as.data.frame(cbind(ri.lo,ri.med,ri.up))
 colnames(ri.out) <- c("ri.lo","ri.med","ri.up")
@@ -637,5 +644,3 @@ rownames(ri.out) <- colnames(datMboot[bootDatColNums])
 
 ri.sort <- ri.out[order(ri.out[,2],decreasing=T),1:3]
 ri.sort
-
-save.image("coelacanthBRTiter1000V2.RData")
