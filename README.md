@@ -1,5 +1,6 @@
 # Coelacanth evolution
 Analyses accompanying article on coelacanth evolution.
+<a href="https://doi.org/10.5281/zenodo.8054092"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8054092.svg" alt="DOI"></a>
 
 <img align="right" src="www/coelacanth.png" alt="Latimeria chalumnae" width="400" style="margin-top: 20px">
 <br>
