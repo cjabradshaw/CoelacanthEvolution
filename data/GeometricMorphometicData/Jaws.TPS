@@ -96,7 +96,7 @@ LM=7
 39 253
 296 223
 540 383
-IMAGE=Namugawi wirngarri
+IMAGE=Ngamugawi wirngarri
 ID=9  
 LM=7
 278 468
