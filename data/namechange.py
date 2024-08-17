@@ -26,7 +26,7 @@ print("Conversion to UTF-8 complete.")
 
 # Set the string to find and the replacement string
 string_to_find = "Gogocoelacanthus_zhumini"
-replacement_string = "Namugawi_wirngarri"
+replacement_string = "Ngamugawi_wirngarri"
 
 # Walk through the directory and its subdirectories
 for root, _, files in os.walk(directory):
@@ -47,7 +47,7 @@ for root, _, files in os.walk(directory):
 
 # Set the string to find and the replacement string
 string_to_find = "Gogocoelacanthus zhumini"
-replacement_string = "Namugawi wirngarri"
+replacement_string = "Ngamugawi wirngarri"
 
 # Walk through the directory and its subdirectories
 for root, _, files in os.walk(directory):
