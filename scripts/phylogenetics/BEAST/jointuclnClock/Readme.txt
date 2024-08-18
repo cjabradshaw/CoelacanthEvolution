@@ -1,1 +1,2 @@
 These files include the BEAST xml executable, and the MCC consensus time tree and substitution tree, with all node and branch annotations (e.g. node ages, branch lengths, rates of evolution for each type of data)
+The xml needs to be run from terminal mode with beast.jar (not Beast gui package) with MC3 commands where relevant, e.g. java -jar /path/beast.jar -overwrite -window -mc3_chains 4 -threads 4 -mc3_delta 0.08 /path/filename.xml
